@@ -66,21 +66,22 @@ public class Load
 		competizioni.add(c); 
 		c = new CoppaDiLega(); 
 		competizioni.add(c);
+		c = new CoppaTurno();
+		competizioni.add(c);
 		c = new SerieA(); 
 		competizioni.add(c); 
 		c = new SerieB(); 
 		competizioni.add(c);
 		c = new SerieC(); 
 		competizioni.add(c);
+		c = new ChampionsFinale();
+		competizioni.add(c);
 		c = new CampionatoRiserve(); 
 		competizioni.add(c);
 		
 		for(Competizione comp: competizioni)
 			comp.carica(m, readData(IN + comp.getNome()));
-		
-		Manuale.aggiungiPremi(m, "Digregorio", "serie in Europa League gia' terminata", 15f);
-		Manuale.aggiungiPremi(m, "Fc El Papu", "serie in Europa League gia' terminata", 15f);
-		
+
 		List<Squadra> l = new LinkedList<>(m.values()); 
 		Collections.sort(l); 
 		
